@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const UserLogin = require("./src/Config/function");
+const UserLogin = require("./Config/function");
 
 const App = express();
 const Login = new UserLogin();
@@ -18,9 +18,6 @@ App.get("/users", async (req,res) => {
 App.post("/user", async (req,res) => {
 
     const {name, email, passeword } = req.body;
-    console.log(name)
-    console.log(email)
-    console.log(passeword)
 
     if(typeof name !== "undefined" && typeof email !== "undefined" && typeof passeword !== "undefined" ){
         await Login.NewsUserLogin(name,email,passeword)
@@ -30,6 +27,21 @@ App.post("/user", async (req,res) => {
         res.status(400).json({aviso: "E obrigatorio o envio do body erro 400"});
     }
 });
+
+
+App.post("/login", async (req,res) => {
+
+    const { email, passeword } = req.body;
+    if(typeof email !== "undefined" && typeof passeword !== "undefined" ){
+        await Login.VerifyLogin(email,passeword)
+            .then(response => res.status(200).json(response))
+            
+    }else{
+        res.status(400).json({aviso: "E obrigatorio o envio do body erro 400"});
+    }
+});
+
+
 
 App.delete("/use/", async (req,res) => {
 
