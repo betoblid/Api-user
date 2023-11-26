@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const UserLogin = require("./Config/function");
+const UserLogin = require("./src/Config/function");
 
 const App = express();
 const Login = new UserLogin();
