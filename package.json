@@ -1,0 +1,17 @@
+{
+  "name": "apilogin",
+  "version": "1.0.0",
+  "description": "aoi de login onde tem acesso a um banco de dados",
+  "main": "./src/App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "herbert souza",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "postgres": "^3.4.3"
+  }
+}
