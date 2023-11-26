@@ -2,10 +2,9 @@
   "name": "apilogin",
   "version": "1.0.0",
   "description": "aoi de login onde tem acesso a um banco de dados",
-  "main": "./App.js",
+  "main": "./src/App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./App.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "herbert souza",
   "license": "MIT",
